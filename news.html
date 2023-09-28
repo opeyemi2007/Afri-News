@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="news.css">
+    <title>News Landing Page</title>
+</head>
+<body>
+   
+  <div id="container">
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Afri-News</h1>
+            </div>
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="sport.html">Sport</a></li>
+                
+            </ul>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton">Search</button>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <div class="header">
+        <div class="container">
+            <b> UPDATE NEWS : </b>
+            <marquee>
+                Are you currently earning in Naira but need salary in US Dollars? Nigerians have now been approved to earn as much as $15,000 (₦13.8 million naira) monthly. Click here to start. Be sure to ask for evidence
+                Small Manhood And Premature Ejaculation Made Me Stay Away from Love Making For 4yrs...But These Simple Solutions WORKED! Click Here To See My Breakthrough!
+            </marquee>
+        </div>
+    </div>
+
+
+
+
+
+
+<!-- Add this to your HTML, inside the main section -->
+<section class="news-slider">
+    <div class="slider-container">
+        <div class="slide">
+            <img src="ads.gif" alt="Article 1">
+            
+        </div>
+        </div>
+        <!-- Add more slides here -->
+  
+</section>
+
+
+
+
+    <main class="landing-page">
+        <section class="grid-news">
+            <article class="article">
+                <h1>Sport</h1>
+                <a href="sport-1.html">
+                    <img src="sport.jpg" alt="sport-1">
+                    <h2>Leipzig hope to keep PSG's Simons beyond loan deal</h2>
+                    <p>Read more...</p>
+                </a>
+            </article>
+            <article class="article">
+                <h1>Fashion</h1>
+                <a href="fashion-1.html">
+                    <img src="fashion.webp" alt="fashion-1">
+                    <h2>13 Fall Trends Vogue Editors Are Already Shopping</h2>
+                    <p>Read More...</p>
+                </a>
+            </article>
+            <article class="article">
+                <h1>Trends</h1>
+                <a href="trend-2.html">
+                    <img src="trend.jpg" alt="trend-2">
+                    <h2>‘The injustice is unfair’ – Naira Marley laments as NDLEA releases Mohbad</h2>
+                    <p>Read More...</p>
+                </a>
+            </article>
+            <article class="article">
+                
+                <a href="politics.html">
+                    <h1>Politicst</h1>
+                    <img src="bn.jpg" alt="politics-1">
+                    <h2>Headlines</h2>
+                    <p>Click too see more...</p>
+                </a>
+            </article>
+           
+            
+            <!-- Add more articles here -->
+        </section>
+    </main>
+
+
+
+
+    <button id="previousPageBtn">
+        <li><a href="home.html">Home</a></li>
+    </button>
+    <footer>
+        <div class="footer-content">
+            <div class="recent-news">
+                <h3>Recent News</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <!-- Add more recent news headlines as needed -->
+                </ul>
+            </div>
+            <div class="site-info">
+                <h3>Site Information</h3>
+                <p>&copy; 2023 Afri-News</p>
+                <p>Contact: info@Afri-News.com</p>
+            </div>
+        </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+<script>
+
+    // Add this code to your script.js
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    
+    searchButton.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the form from actually submitting and reloading the page
+        searchInput.classList.toggle('active');
+        searchInput.focus(); // Automatically focus on the search input when it expands
+    });
+    
+    searchForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from actually submitting and reloading the page
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        
+        if (searchTerm !== '') {
+            performSearch(searchTerm); // Call the function to perform the search
+        } else {
+            alert('Please enter a search term.');
+        }
+    });
+    
+    function performSearch(query) {
+        // In a real application, you would perform an actual search operation here.
+        // For this example, we'll just display an alert with the search query.
+        alert(`Searching for: ${query}`);
+    }
+    
+    
+    
+    // Add this JavaScript code to your script.js
+    const sliderContainer = document.querySelector('.slider-container');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    
+    let slideIndex = 0;
+    
+    prevButton.addEventListener('click', () => {
+        slideIndex--;
+        showSlide();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        slideIndex++;
+        showSlide();
+    });
+    
+    function showSlide() {
+        const slides = document.querySelectorAll('.slide');
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        sliderContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+    
+    // Automatically advance the slider every few seconds (optional)
+    setInterval(() => {
+        slideIndex++;
+        showSlide();
+    }, 5000); // Change slide every 5 seconds (adjust as needed)
+    
+    
+    
+    
+    </script>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>News Website</title>
+</head>
+<body>
+
+<div id="container">
+
+
+
+
+<style>
+    /* Add your styles here */
+/* Basic styling for the header and navbar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.search input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+/* Add this to your styles.css */
+/* Hidden search input */
+#searchInput {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: width 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+/* Expand the search input when focused */
+#searchInput.active {
+    width: 150px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+#container{
+    width: 1310px;
+    margin: 0px auto;
+}
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 1300px;
+    margin: 0px auto;
+}
+.header{
+    background: #46b7c1;
+    padding:6px;
+    margin-bottom: 20px;
+}
+.header b{
+    background: #fff;
+    color: red;
+    padding: 10px;
+    font-size: 20px;
+}
+.header marquee{
+    font-size: 20px;
+    color: #fff;
+    width: 40%;
+} 
+
+
+
+
+
+
+
+
+
+/* Add this to your CSS */
+/* Styling for the featured news section */
+.featured-news {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    align-items: center;
+    align-content: center;
+}
+
+.main-article {
+    max-width: 100%;
+}
+
+.main-article img {
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.featured-news h2{
+    text-align: center;
+    font-size: 40px ;
+}
+
+/* Styling for the grid news section */
+.grid-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Add this to your CSS */
+/* Styling for the social media container */
+.social-media {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.social-media h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.social-media li {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.social-media a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style social media icons (replace with actual icon styles) */
+.social-media img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+        /* Style for the comment section */
+        h2 {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        #comments {
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .comment {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .comment strong {
+            font-weight: bold;
+        }
+
+        /* Style for the comment form */
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    
+
+
+
+
+        button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+button li{
+    
+    list-style-type: none;
+}
+
+button li a{
+   font-weight: bold;
+   text-decoration: none;
+   color: #fff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+</style>
+
+
+
+  
+</section>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Afri-News</h1>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="fashion.html">Fashion</a></li>
+                <li><a href="politics.html">Politics</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="search">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" name="searchQuery" placeholder="Search...">
+                    <button type="submit" id="searchButton">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="header">
+        <div class="container">
+            <b> UPDATE NEWS : </b>
+            <marquee>
+                Are you currently earning in Naira but need salary in US Dollars? Nigerians have now been approved to earn as much as $15,000 (₦13.8 million naira) monthly. Click here to start. Be sure to ask for evidence
+                Small Manhood And Premature Ejaculation Made Me Stay Away from Love Making For 4yrs...But These Simple Solutions WORKED! Click Here To See My Breakthrough!
+            </marquee>
+        </div>
+    </div>
+
+
+
+
+
+    <section class="news-slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="ads2.jpg" alt="Article 1">
+                
+            </div>
+            </div>
+            <!-- Add more slides here -->
+
+
+
+
+
+
+
+
+    <main>
+        <section class="featured-news">
+            <article class="main-article">
+                <img src="boxing-1424x802.jpg" alt="Main Article">
+                <h2>How did boxing go from a global sport for elite competitors to a social media sideshow?</h2>
+                <p>The year is 1900, and the biggest sport in many parts of the western world is boxing. It’s known as the ‘manly art’ in America and ‘pugilism’ in Great Britain. Small towns compete with one another to host more and more shows, giving local boys and men opportunities to fight their way to the top.
+
+                    Europe, Australia, and South America all become areas where fighters begin to tour and put on exhibitions. The world champions of the day are household names, but more than that, boxing itself is a household institution. And then visit 2023… everything is different.
+                    
+                    The rise of radio, TV, cable and ultimately Pay Per View turned live boxing into something altogether different from a commercial point of view. Yes, the elite fighters of today are rich beyond the wildest dreams of the fighters from 100 years ago, and they have to fight far less to earn their riches too. But all is not as it seems when you ask a boxing fan.
+                    
+                    They will regale you with stories of how warriors from the past like Benny Lynch and Harry Greb would have had hundreds of fights, fighting multiple times a week in some cases. They took on all comers, fought unlicensed bouts, put on exhibitions in between world title defenses, and always looked to put on a show for the crowd. True, today we have Terence Crawford and Canelo — two fighters who would have excelled in any era — and yet fight fans are dissatisfied. Why is this?
+                    
+                    In an era in which commercial revenue has never been higher for elite boxing matches, many see there is simply too much to risk by having the best fight the best. This is the era of the undefeated record being worth its weight in gold, of four sanctioning body belts, 17 weight classes and the interim titles fight fans look on with disdain. And yet the boxers make more money than ever before by fighting far less than they would have had to in the past.
+                    
+                    When Canelo annexed the super middleweight division in just 11 months, he was lauded for fighting three times in less than a year. While this is quite something at a time in boxing when top name fighters rarely fight more than twice a year, it pales in comparison to the feats of the fighters of yesteryear. But once again, we come back to the point that he made more money than any fighter from yesteryear. Surely if the financial health of the elite fighters has never been better, boxing must be in a good place? Not really.
+                    
+                    You see, boxing is one of those unusual commercial propositions that used to be mainstream, is now seen as niche, and yet can still attract the biggest audiences in sports. While the number of people who follow the boxing scene on a weekly basis has dipped dramatically compared to just a few decades ago, the ability of the right fight to capture public imagination has never gone away.
+                    
+                    The biggest crossover fight of the last decade? 49-0 Floyd Mayweather Jr facing 0-0 UFC star Conor McGregor. Yes, McGregor can clearly fight, and yes, he is a far better boxer than Mayweather will ever be an MMA fighter, but it was still a mismatch. What it showed, however, is the hype that two flamboyant and controversial characters can build, especially when it culminates in being settled with two sets of fists. We then had a bout between two legends of the ring both the wrong side of 50: Mike Tyson vs Roy Jones Jr. Their pedigree is unquestionable, but because they’re far from their peaks, it was only their star power that brought eyes to the screen. And when those eyes came, dollars were not far behind. It’s at this point the door opened.
+                    
+                    Mayweather began ‘fighting’ exhibitions where he’d beat up on MMA fighters before dropping the competition down even further and ‘fighting’ muscled up social media stars. DAZN brought in MisFits Boxing to specialize in influencer vs influencer matches, each bringing already established audiences beyond the pay wall. This brings us to where we are today.
+                    
+                    Many influencers see boxing as a lucrative gateway to a more mainstream audience. Along the way to a PPV bout they give content based on their training videos and press conferences away for free on their social media channels in the hope of drumming up more PPV buys and ticket sales the night of the fight. Brands have being doing this for decades, with everyone from online casinos offering demo slots to local eateries giving out samples to crowds on a busy Saturday.
+                    
+                    What these clearly savvy marketers and self-promotors have seen is that their audiences will pay to see them fight. They know how to talk trash, stoke controversy and make just the right type of incendiary remarks without going too far and becoming vulgar. All they have to do is a modest level of training, post it to their audience and then find a rival to shout about.
+                    
+                    No one does this better than one-time Disney Channel presenter Jake Paul. Today you’ll find him boxing 8-rounders of modest skill level against retired MMA fighters. He’s smart, picking fighters known for their standup skills in Tyron Woodley and Anderson Silva, but fighters who left the UFC after being unable to win anymore in the sport they actually specialized in. To say the 8-figure pay slips Paul claims to cash epitomize the state of boxing and the rise of influencer boxing would be an understatement. In fact, they’ve fast become the blueprint for influencers in search of a serious payday.
+                    
+                    Whether influencer boxing becomes bigger than the real thing remains to be seen, but they certainly do a far better job of promoting themselves. If real boxing can learn from this, the sport may just be ready to move back across the street and switch from niche back into mainstream.</p>
+            </p>
+            </article>
+        </section>
+    
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <button id="previousPageBtn">
+        <li><a href="sport.html">Back</a></li>
+    </button>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Your existing content for Recent News and Site Information -->
+            <div class="recent-news">
+                <h3>Recent News</h3>
+                <ul>
+                    <li><a href="#">Headline 1</a></li>
+                    <li><a href="#">Headline 2</a></li>
+                    <li><a href="#">Headline 3</a></li>
+                    <!-- Add more recent news headlines as needed -->
+                </ul>
+            </div>
+            <div class="site-info">
+                <h3>Site Information</h3>
+                <p>&copy; 2023 Afri-News</p>
+                <p>Contact: info@Afri-News.com</p>
+            </div>
+            <!-- Add a social media container -->
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.webp" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <!-- Add more social media icons and links as needed -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+
+<script>
+    // Function to display comments
+    function displayComments() {
+        const commentsDiv = document.getElementById('comments');
+        commentsDiv.innerHTML = '';
+
+        // Retrieve comments from local storage (for demonstration purposes)
+        const storedComments = localStorage.getItem('comments');
+        const comments = storedComments ? JSON.parse(storedComments) : [];
+
+        // Display comments
+        comments.forEach(comment => {
+            const commentDiv = document.createElement('div');
+            commentDiv.innerHTML = `<strong>${comment.name}:</strong> ${comment.comment}`;
+            commentsDiv.appendChild(commentDiv);
+        });
+    }
+
+    // Function to add a new comment
+    function addComment(event) {
+        event.preventDefault();
+        const nameInput = document.getElementById('name');
+        const commentInput = document.getElementById('comment');
+
+        // Get the current comments from local storage
+        const storedComments = localStorage.getItem('comments');
+        const comments = storedComments ? JSON.parse(storedComments) : [];
+
+        // Add the new comment to the array
+        comments.push({ name: nameInput.value, comment: commentInput.value });
+
+        // Save the updated comments back to local storage
+        localStorage.setItem('comments', JSON.stringify(comments));
+
+        // Clear the form inputs
+        nameInput.value = '';
+        commentInput.value = '';
+
+        // Refresh the displayed comments
+        displayComments();
+    }
+
+    // Display existing comments on page load
+    displayComments();
+
+    // Add event listener for the comment form submission
+    const commentForm = document.getElementById('commentForm');
+    commentForm.addEventListener('submit', addComment);
+</script>
